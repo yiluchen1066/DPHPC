@@ -10,7 +10,7 @@ int main(int argc, char** argv){
     MPI_Comm_size(MPI_COMM_WORLD, &world_size); 
 
     if (world_size <2){
-        fprintf(stderr, "World size must be greater than 1 for %s\n", argc[0]); 
+        fprintf(stderr, "World size must be greater than 1 for %s\n", argv[0]); 
         MPI_Abort(MPI_COMM_WORLD, 1); 
     }
     int number; 
